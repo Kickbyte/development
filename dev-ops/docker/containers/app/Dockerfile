@@ -1,4 +1,4 @@
-FROM webdevops/php-apache:7.2
+FROM webdevops/php-apache-dev:7.2
 
 COPY wait-for-it.sh /usr/local/bin/
 
@@ -41,4 +41,3 @@ RUN sed -ri -e 's!VirtualHost \*:80!VirtualHost \*:8000!g' /opt/docker/etc/httpd
 COPY php-config.ini /usr/local/etc/php/conf.d/99-docker.ini
 
 WORKDIR /app
-
